@@ -1,0 +1,142 @@
+@import url('https://fonts.cdnfonts.com/css/lora');
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Высота на весь экран */
+    margin: 0; /* Убираем отступы */
+}
+
+.home {
+    flex-grow: 1; /* Этот блок займет всё оставшееся пространство */
+}
+
+.footer_wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color: #3B388D;
+    color: white;
+    font-family: 'Lora', 'Regular', sans-serif;
+    font-size: 12px;
+    padding: 10px;
+    text-align: center;
+}
+
+.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.home__logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    gap: 43px;
+}
+
+.home__name{
+    font-family: 'Lora', 'Regular', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    color: #3B388D;
+}
+
+.home__find-input{
+    margin-top: 70px;
+    width: 680px;
+    height: 50px;
+    border-width: 3px;
+    border-color: #3B388D;
+    border-radius: 10px;
+    border-style: solid;
+}
+
+.home__find-button{
+    width: 112px;
+    height: 55px;
+    border-color: #3B388D;
+    border-radius: 5px;
+    border-style: solid;
+    background-color: #3B388D;
+    color: white;
+    font-family: 'Lora', 'Regular', sans-serif;
+    font-size: 15px;
+}
+
+.home__find-button:active, .home__find-button:hover{
+    background-color: #2e2c74;
+}
+
+.home__find-href{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    font-family: 'Lora', 'Regular', sans-serif;
+    font-size: 15px;
+    color: #3B388D;
+}
+
+.home__desc{
+    width: 470px;
+    margin-top: 35px;
+    font-family: 'Lora', 'Regular', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    text-align: center;
+    color: #3B388D;
+}
+
+.home__about{
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.switcher__wrapper{
+    display: flex;
+    align-self: flex-end;
+    margin-top: 40px;
+    margin-right: 50px;
+}
+
+.language-switcher {
+    display: flex;
+    border: 2px solid #3B388D;
+    border-radius: 25px;
+    overflow: hidden;
+    width: 100px;
+    cursor: pointer;
+}
+
+
+.switch-option {
+    flex: 1;
+    text-align: center;
+    padding: 10px 0;
+    font-family: 'Lora', 'Regular', sans-serif;
+    font-size: 14px;
+    color: #3B388D;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.switch-option.active {
+    background-color: #3B388D;
+    color: white;
+}
+
+.switch-option:not(.active) {
+    background-color: white;
+}
+
