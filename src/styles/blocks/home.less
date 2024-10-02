@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    .container;
 
     &__logo{
         display: flex;
@@ -21,15 +22,27 @@
     }
 
     &__find{
+       
+        @media @bw960 {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
 
         &-input{
             margin-top: 70px;
-            width: 680px;
+            flex-grow: 1;
             height: 50px;
+            width: 680px;
             border-width: 3px;
             border-color: #3B388D;
             border-radius: 10px;
             border-style: solid;
+            
+            @media @bw960{
+                width: calc(100vw - 35%);
+                align-self: center;
+            }
         }
 
         &-button{
@@ -50,16 +63,25 @@
             :hover{
                 background-color: #2e2c74;
             }
+
+            @media @bw960{
+                align-self: center;
+                margin-top: 15px;
+            }
         }
 
         &-href{
             margin-top: 25px;
             display: flex;
             flex-direction: row;
-            gap: 50px;
+            justify-content: space-around;
             font-family: 'Lora', 'Regular', sans-serif;
             font-size: 15px;
             color: #3B388D;
+
+            @media @bw500{
+                font-size: 14px;
+            }
         }
 
     }
@@ -72,6 +94,11 @@
         font-weight: 500;
         text-align: center;
         color: #3B388D;
+
+        @media @bw600{
+            font-size: 13px;
+            width: calc(100vw - 25%);
+        }
     }
 
     &__about{
