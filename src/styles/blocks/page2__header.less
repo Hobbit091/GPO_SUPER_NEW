@@ -16,6 +16,12 @@
         gap: 15px;
     }
 
+    &-picture{
+        @media @bw650{
+            display: none;
+        }
+    }
+
     &-logo{
         display: flex;
         align-items: center;
@@ -23,6 +29,14 @@
         gap:15px;
         color: white;
         font-size: 25px;
+
+        @media @bw960{
+            font-size: 20px;
+        }
+
+        @media @bw650{
+            font-size: 17px;
+        }
 
     }
 
@@ -42,19 +56,27 @@
         }
     }
 
-    &-search-box{
-        max-width:500px;
+    &-search-box {
+        max-width: 500px;
         width: 100%;
         max-height: 50px;
+        display: flex;
         align-items: center;
+        gap: 10px; // Added spacing between input and button
+        flex-wrap: wrap; // Allows wrapping on smaller screens
     }
-
-    &-search-input{
-        width: 60%;
+    
+    &-search-input {
+        flex: 1; // Makes the input take available space
+        max-width: 200px; // Ensures a minimum width for the input
+        width: 100%;
         height: 40px;
+        padding: 5px;
+        font-size: 14px; // Adjust font size for readability
     }
-
-    &-search-button{
+    
+    &-search-button {
+        flex-shrink: 0; // Prevents the button from shrinking
         width: 75px;
         height: 45px;
         background-color: black;
@@ -62,18 +84,14 @@
         color: white;
         font-family: 'Lora', 'Regular', sans-serif;
         font-size: 13px;
-
-        &:hover{
+        text-align: center;
+        cursor: pointer;
+    
+        &:hover {
             background-color: gray;
         }
-
-        @media @bw768{
-            width: 55px;
-            font-size: 10px;
-            text-align: center;
-        }
-        
-       
+    
     }
+    
 
 }

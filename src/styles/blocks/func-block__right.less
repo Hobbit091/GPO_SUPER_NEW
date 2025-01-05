@@ -12,6 +12,9 @@
 
 
     &-name{
+        border-style:solid;
+        border-radius: 8px;
+        border-width: 0;
         background-color: #9FC53A;
         height: 50px;
         font-size: 20px;
@@ -19,12 +22,13 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-
+        
         @media @bw500{
-            font-size: 10px;
+            font-size: 13px;
         }
-        @media @bw1020{
+        @media @bw960{
             font-size: 15px;
+            text-align: center;
         }
     }
 }
